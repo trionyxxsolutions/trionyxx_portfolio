@@ -6,6 +6,8 @@ import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { TechStack } from "@/components/sections/TechStack";
 import { Projects } from "@/components/sections/Projects";
 import { CtaBanner } from "@/components/sections/CtaBanner";
+import logoLight from "../assets/logo.png";
+import logoDark from "../assets/logo2.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({

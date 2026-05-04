@@ -2,6 +2,7 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/r
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider, themeScript } from "@/components/theme-provider";
+import icon from "../assets/icon.png";
 
 import appCss from "../styles.css?url";
 
@@ -46,9 +47,11 @@ export const Route = createRootRoute({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "icon", href: icon },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {

@@ -28,7 +28,7 @@ export function Footer() {
             <h4 className="text-sm font-semibold mb-4">Connect</h4>
             <div className="flex items-center gap-3">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/trionyx-solutions-b11044405/"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
@@ -37,16 +37,7 @@ export function Footer() {
                 <Linkedin size={16} />
               </a>
               <a
-                href="https://github.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="GitHub"
-                className="h-9 w-9 grid place-items-center rounded-lg border border-border hover:bg-secondary hover:border-primary/40 transition-all"
-              >
-                <Github size={16} />
-              </a>
-              <a
-                href="mailto:contact@trionyxx.com"
+                href="mailto:trionyxxsolutions@gmail.com"
                 aria-label="Email"
                 className="h-9 w-9 grid place-items-center rounded-lg border border-border hover:bg-secondary hover:border-primary/40 transition-all"
               >
