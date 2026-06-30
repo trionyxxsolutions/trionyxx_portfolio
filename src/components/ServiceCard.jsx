@@ -1,0 +1,6 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { motion } from "framer-motion";
+import { fadeUp } from "@/animations/variants";
+export function ServiceCard({ icon: Icon, title, description }) {
+    return (_jsxs(motion.div, { variants: fadeUp, whileHover: { y: -4 }, transition: { type: "spring", stiffness: 300, damping: 20 }, className: "group relative rounded-2xl glass p-6 overflow-hidden hover:border-primary/30 transition-colors", children: [_jsx("div", { className: "absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-brand-soft pointer-events-none" }), _jsx("div", { className: "absolute -top-20 -right-20 h-40 w-40 rounded-full bg-gradient-brand opacity-0 group-hover:opacity-20 blur-3xl transition-opacity duration-500" }), _jsxs("div", { className: "relative", children: [_jsx("div", { className: "h-11 w-11 rounded-xl bg-secondary border border-border grid place-items-center group-hover:bg-gradient-brand group-hover:border-transparent transition-all duration-300", children: _jsx(Icon, { size: 20, className: "text-foreground" }) }), _jsx("h3", { className: "mt-5 font-display text-lg font-semibold", children: title }), _jsx("p", { className: "mt-2 text-sm text-muted-foreground leading-relaxed", children: description })] })] }));
+}
