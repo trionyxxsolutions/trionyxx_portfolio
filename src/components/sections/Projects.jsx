@@ -3,34 +3,34 @@ import { ArrowUpRight } from "lucide-react";
 import { Section } from "../Section";
 import { fadeUp } from "@/animations/variants";
 
-import p1 from "@/assets/project-1.jpg";
-import p2 from "@/assets/project-2.jpg";
-import p3 from "@/assets/project-3.jpg";
+// import p1 from "@/assets/project-1.jpg";
+// import p2 from "@/assets/project-2.jpg";
+// import p3 from "@/assets/project-3.jpg";
 import p4 from "@/assets/project-4.jpg";
 //import p5 from "@/assets/gogol-collection.jpg";
 
 const projects = [
-  {
-    img: p1,
-    tag: "Fintech · SaaS",
-    title: "Helios Analytics",
-    desc: "Real-time analytics platform processing 200M+ events/day.",
-    contain: false,
-  },
-  {
-    img: p2,
-    tag: "Mobile · Banking",
-    title: "Northwind Pay",
-    desc: "Cross-platform fintech app with biometric authentication, secure payments, and instant money transfers.",
-    contain: false,
-  },
-  {
-    img: p3,
-    tag: "AI · Enterprise",
-    title: "Atlas Intelligence",
-    desc: "RAG-powered enterprise knowledge engine enabling intelligent document search and AI-assisted workflows.",
-    contain: false,
-  },
+  // {
+  //   img: p1,
+  //   tag: "Fintech · SaaS",
+  //   title: "Helios Analytics",
+  //   desc: "Real-time analytics platform processing 200M+ events/day.",
+  //   contain: false,
+  // },
+  // {
+  //   img: p2,
+  //   tag: "Mobile · Banking",
+  //   title: "Northwind Pay",
+  //   desc: "Cross-platform fintech app with biometric authentication, secure payments, and instant money transfers.",
+  //   contain: false,
+  // },
+  // {
+  //   img: p3,
+  //   tag: "AI · Enterprise",
+  //   title: "Atlas Intelligence",
+  //   desc: "RAG-powered enterprise knowledge engine enabling intelligent document search and AI-assisted workflows.",
+  //   contain: false,
+  // },
   {
     img: p4,
     tag: "Web · Sports Tech",
@@ -38,13 +38,13 @@ const projects = [
     desc: "Developed a full-stack competition management platform featuring live judge scoring, participant registration, real-time leaderboards, and role-based dashboards for administrators and judges.",
     contain: true,
   },
-  {
-    img: p5,
-    tag: "E-Commerce · React · Spring Boot",
-    title: "Gogol Collection",
-    desc: "Designed and developed a modern full-stack e-commerce platform using React, Spring Boot, and MySQL. Features include authentication, product catalog, category management, shopping cart, order placement, featured products, exclusive offers, responsive UI, and a comprehensive admin dashboard for product and order management.",
-    contain: false,
-  },
+  // {
+  //   img: p5,
+  //   tag: "E-Commerce · React · Spring Boot",
+  //   title: "Gogol Collection",
+  //   desc: "Designed and developed a modern full-stack e-commerce platform using React, Spring Boot, and MySQL. Features include authentication, product catalog, category management, shopping cart, order placement, featured products, exclusive offers, responsive UI, and a comprehensive admin dashboard for product and order management.",
+  //   contain: false,
+  // },
 ];
 
 export function Projects() {

@@ -5,5 +5,110 @@ import { ArrowRight, Lightbulb } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import { fadeUp, stagger } from "@/animations/variants";
 export function Hero() {
-    return (_jsxs("section", { className: "relative overflow-hidden pt-32 pb-24 sm:pt-44 sm:pb-32", children: [_jsxs("div", { className: "absolute inset-0 -z-10", children: [_jsx("img", { src: heroBg, alt: "", width: 1920, height: 1080, className: "absolute inset-0 h-full w-full object-cover opacity-40" }), _jsx("div", { className: "absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background" }), _jsx("div", { className: "absolute inset-0 bg-gradient-radial" }), _jsx("div", { className: "absolute inset-0 grid-pattern opacity-40" })] }), _jsxs(motion.div, { variants: stagger, initial: "hidden", animate: "visible", className: "relative mx-auto max-w-5xl px-6 lg:px-8 text-center", children: [_jsx(motion.div, { variants: fadeUp, className: "flex justify-center", children: _jsxs("span", { className: "inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs text-muted-foreground", children: [_jsx(Lightbulb, { size: 12, className: "text-accent" }), "Trionyx Solutions — Your Vision. Our Expertise. One Solution"] }) }), _jsxs(motion.h1, { variants: fadeUp, className: "mt-7 font-display text-5xl sm:text-7xl lg:text-[88px] font-semibold leading-[1.02] tracking-tight", children: ["Engineering", " ", _jsx("span", { className: "text-gradient", children: "scalable" }), _jsx("br", {}), "digital solutions."] }), _jsx(motion.p, { variants: fadeUp, className: "mt-7 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed", children: "We build powerful web, mobile, and AI-driven systems for modern businesses \u2014 from idea to production-grade infrastructure." }), _jsxs(motion.div, { variants: fadeUp, className: "mt-10 flex flex-col sm:flex-row items-center justify-center gap-3", children: [_jsx(motion.div, { whileHover: { scale: 1.03 }, whileTap: { scale: 0.97 }, children: _jsxs(Link, { to: "/contact", className: "group inline-flex items-center gap-2 rounded-full bg-gradient-brand px-7 py-3.5 text-sm font-medium text-on-brand shadow-glow-blue hover:shadow-glow-orange transition-shadow duration-500", children: ["Start a project", _jsx(ArrowRight, { size: 16, className: "group-hover:translate-x-1 transition-transform" })] }) }), _jsx(motion.div, { whileHover: { scale: 1.03 }, whileTap: { scale: 0.97 }, children: _jsx(Link, { to: "/services", className: "inline-flex items-center gap-2 rounded-full glass px-7 py-3.5 text-sm font-medium hover:bg-secondary transition-colors", children: "Explore services" }) })] }), _jsxs(motion.div, { variants: fadeUp, className: "mt-16 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-xs text-muted-foreground/80", children: [_jsx("span", { children: "Trusted by ambitious teams" }), _jsx("span", { className: "font-display tracking-widest", children: "FINTECH" }), _jsx("span", { className: "font-display tracking-widest", children: "HEALTHTECH" }), _jsx("span", { className: "font-display tracking-widest", children: "AI LABS" }), _jsx("span", { className: "font-display tracking-widest", children: "ENTERPRISE" })] })] })] }));
+  return _jsxs("section", {
+    className: "relative overflow-hidden pt-32 pb-24 sm:pt-44 sm:pb-32",
+    children: [
+      _jsxs("div", {
+        className: "absolute inset-0 -z-10",
+        children: [
+          _jsx("img", {
+            src: heroBg,
+            alt: "",
+            width: 1920,
+            height: 1080,
+            className: "absolute inset-0 h-full w-full object-cover opacity-40",
+          }),
+          _jsx("div", {
+            className:
+              "absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background",
+          }),
+          _jsx("div", { className: "absolute inset-0 bg-gradient-radial" }),
+          _jsx("div", { className: "absolute inset-0 grid-pattern opacity-40" }),
+        ],
+      }),
+      _jsxs(motion.div, {
+        variants: stagger,
+        initial: "hidden",
+        animate: "visible",
+        className: "relative mx-auto max-w-5xl px-6 lg:px-8 text-center",
+        children: [
+          _jsx(motion.div, {
+            variants: fadeUp,
+            className: "flex justify-center",
+            // children: _jsxs("span", {
+            //   className:
+            //     "inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs text-muted-foreground",
+            //   children: [
+            //     _jsx(Lightbulb, { size: 12, className: "text-accent" }),
+            //     "Crafting powerful digital solutions",
+            //   ],
+            // }),
+          }),
+          _jsxs(motion.h1, {
+            variants: fadeUp,
+            className:
+              "mt-7 font-display text-5xl sm:text-7xl lg:text-[88px] font-semibold leading-[1.02] tracking-tight",
+            children: [
+              "Engineering",
+              " ",
+              _jsx("span", { className: "text-gradient", children: "scalable" }),
+              _jsx("br", {}),
+              "digital solutions.",
+            ],
+          }),
+          _jsx(motion.p, {
+            variants: fadeUp,
+            className:
+              "mt-7 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed",
+            children:
+              "We build powerful web, mobile, and AI-driven systems for modern businesses \u2014 from idea to production-grade infrastructure.",
+          }),
+          _jsxs(motion.div, {
+            variants: fadeUp,
+            className: "mt-10 flex flex-col sm:flex-row items-center justify-center gap-3",
+            children: [
+              _jsx(motion.div, {
+                whileHover: { scale: 1.03 },
+                whileTap: { scale: 0.97 },
+                children: _jsxs(Link, {
+                  to: "/contact",
+                  className:
+                    "group inline-flex items-center gap-2 rounded-full bg-gradient-brand px-7 py-3.5 text-sm font-medium text-on-brand shadow-glow-blue hover:shadow-glow-orange transition-shadow duration-500",
+                  children: [
+                    "Start a project",
+                    _jsx(ArrowRight, {
+                      size: 16,
+                      className: "group-hover:translate-x-1 transition-transform",
+                    }),
+                  ],
+                }),
+              }),
+              _jsx(motion.div, {
+                whileHover: { scale: 1.03 },
+                whileTap: { scale: 0.97 },
+                children: _jsx(Link, {
+                  to: "/services",
+                  className:
+                    "inline-flex items-center gap-2 rounded-full glass px-7 py-3.5 text-sm font-medium hover:bg-secondary transition-colors",
+                  children: "Explore services",
+                }),
+              }),
+            ],
+          }),
+          _jsxs(motion.div, {
+            variants: fadeUp,
+            className:
+              "mt-16 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-xs text-muted-foreground/80",
+            children: [
+              _jsx("span", { children: "Trusted by ambitious teams" }),
+              _jsx("span", { className: "font-display tracking-widest", children: "FINTECH" }),
+              _jsx("span", { className: "font-display tracking-widest", children: "HEALTHTECH" }),
+              _jsx("span", { className: "font-display tracking-widest", children: "AI LABS" }),
+              _jsx("span", { className: "font-display tracking-widest", children: "ENTERPRISE" }),
+            ],
+          }),
+        ],
+      }),
+    ],
+  });
 }
