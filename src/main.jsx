@@ -1,13 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider } from "@tanstack/react-router";
+import { AnimatePresence } from "framer-motion";
 import { getRouter } from "./router";
+import { TrionyxxLoader } from "@/components/TrionyxxLoader";
 import "./styles.css";
 
 const router = getRouter();
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
-);
+function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  return (
+    <React.StrictMode>
+      <AnimatePresence mode="wait">
+        {loading ? (
+          <TrionyxxLoader key="trionyxx-loader" />
+        ) : (
+          <RouterProvider key="trionyxx-app" router={router} />
+        )}
+      </AnimatePresence>
+    </React.StrictMode>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
