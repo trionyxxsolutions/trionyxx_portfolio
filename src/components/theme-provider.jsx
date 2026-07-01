@@ -1,6 +1,6 @@
 import { jsx as _jsx } from "react/jsx-runtime";
 import { createContext, useContext, useEffect, useState, useCallback } from "react";
-const STORAGE_KEY = "trionyxx-theme";
+const STORAGE_KEY = "Trionyx-theme";
 const ThemeContext = createContext(undefined);
 function getSystemTheme() {
     if (typeof window === "undefined")

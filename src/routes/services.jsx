@@ -8,12 +8,12 @@ import { fadeUp, slideInLeft, slideInRight } from "@/animations/variants";
 export const Route = createFileRoute("/services")({
     head: () => ({
         meta: [
-            { title: "Services — Trionyxx Solutions" },
+            { title: "Services — Trionyx Solutions" },
             {
                 name: "description",
                 content: "Web, mobile, custom software, cloud, AI, UI/UX, cybersecurity and IT consulting — engineered end to end.",
             },
-            { property: "og:title", content: "Services — Trionyxx Solutions" },
+            { property: "og:title", content: "Services — Trionyx Solutions" },
             {
                 property: "og:description",
                 content: "End-to-end engineering, design and operations under one roof.",

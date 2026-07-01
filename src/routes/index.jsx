@@ -10,12 +10,12 @@ import { CtaBanner } from "@/components/sections/CtaBanner";
 export const Route = createFileRoute("/")({
     head: () => ({
         meta: [
-            { title: "Trionyxx Solutions — Engineering Scalable Digital Solutions" },
+            { title: "Trionyx Solutions — Engineering Scalable Digital Solutions" },
             {
                 name: "description",
                 content: "We build powerful web, mobile, and AI-driven systems for modern businesses. Engineering studio for ambitious teams.",
             },
-            { property: "og:title", content: "Trionyxx Solutions" },
+            { property: "og:title", content: "Trionyx Solutions" },
             {
                 property: "og:description",
                 content: "Engineering scalable digital solutions — web, mobile, AI and cloud.",

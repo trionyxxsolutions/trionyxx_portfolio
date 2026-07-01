@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { RouterProvider } from "@tanstack/react-router";
 import { AnimatePresence } from "framer-motion";
 import { getRouter } from "./router";
-import { TrionyxxLoader } from "@/components/TrionyxxLoader";
+import { TrionyxLoader } from "@/components/TrionyxLoader";
 import "./styles.css";
 
 const router = getRouter();
@@ -23,9 +23,9 @@ function App() {
     <React.StrictMode>
       <AnimatePresence mode="wait">
         {loading ? (
-          <TrionyxxLoader key="trionyxx-loader" />
+          <TrionyxLoader key="Trionyx-loader" />
         ) : (
-          <RouterProvider key="trionyxx-app" router={router} />
+          <RouterProvider key="Trionyx-app" router={router} />
         )}
       </AnimatePresence>
     </React.StrictMode>

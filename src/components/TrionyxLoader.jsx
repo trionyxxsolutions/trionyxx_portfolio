@@ -1,10 +1,10 @@
 import { motion, useReducedMotion } from "framer-motion";
 import logoDark from "@/assets/logo-symbol.png";
 
-export function TrionyxxLoader({
+export function TrionyxLoader({
     compact = false,
     label = "IT Solutions",
-    brandName = "TRIONYXX",
+    brandName = "TRIONYX",
 }) {
     const reduceMotion = useReducedMotion();
 
@@ -19,7 +19,7 @@ export function TrionyxxLoader({
             exit={{ opacity: 0, scale: 1.03, filter: "blur(10px)" }}
             transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
             role="status"
-            aria-label="Loading Trionyxx"
+            aria-label="Loading Trionyx"
         >
             {/* Dark cinematic background */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(148,163,184,0.16),transparent_35%),linear-gradient(135deg,#020617,#07111f_55%,#020617)]" />
@@ -135,7 +135,7 @@ export function TrionyxxLoader({
 
                         <img
                             src={logoDark}
-                            alt="Trionyxx"
+                            alt="Trionyx"
                             className="relative z-10 w-60 object-contain drop-shadow-[0_28px_55px_rgba(0,0,0,0.9)] sm:w-72"
                         />
 

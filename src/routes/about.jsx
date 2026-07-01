@@ -10,12 +10,12 @@ import { fadeUp } from "@/animations/variants";
 export const Route = createFileRoute("/about")({
     head: () => ({
         meta: [
-            { title: "About — Trionyxx Solutions" },
+            { title: "About — Trionyx Solutions" },
             {
                 name: "description",
-                content: "Meet Trionyxx Solutions — a studio for teams that ship serious software.",
+                content: "Meet Trionyx Solutions — a studio for teams that ship serious software.",
             },
-            { property: "og:title", content: "About — Trionyxx Solutions" },
+            { property: "og:title", content: "About — Trionyx Solutions" },
             {
                 property: "og:description",
                 content: "A studio for teams that ship serious software.",
