@@ -20,12 +20,13 @@
     <meta name="author" content="Trionyx Solutions" />
     <meta name="robots" content="index, follow" />
 
-    <!-- Canonical URL -->
+    <!-- Canonical URL: use this only if non-www redirects to www -->
     <link rel="canonical" href="https://www.trionyxsols.co.in/" />
 
-    <!-- Favicon / Logo -->
-    <link rel="icon" type="image/png" href="/icon.png" />
-    <link rel="apple-touch-icon" href="/logo.png" />
+    <!-- Favicon for browser + Google Search -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
     <meta property="og:title" content="Trionyx Solutions | Web Development & IT Services" />
@@ -59,16 +60,25 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     />
 
-    <!-- Structured Data for SEO -->
+    <!-- Structured Data for Google site name + organization -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Trionyx Solutions",
-        "url": "https://www.trionyxsols.co.in/",
-        "logo": "https://www.trionyxsols.co.in/logo.png",
-        "description": "Trionyx Solutions provides website development, business websites, portfolio websites, AI-driven systems, mobile solutions, and scalable digital products.",
-        "sameAs": []
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "Trionyx Solutions",
+            "alternateName": ["Trionyx", "trionyxsols.co.in"],
+            "url": "https://www.trionyxsols.co.in/"
+          },
+          {
+            "@type": "Organization",
+            "name": "Trionyx Solutions",
+            "url": "https://www.trionyxsols.co.in/",
+            "logo": "https://www.trionyxsols.co.in/icon.png",
+            "description": "Trionyx Solutions provides website development, business websites, portfolio websites, AI-driven systems, mobile solutions, and scalable digital products."
+          }
+        ]
       }
     </script>
 
