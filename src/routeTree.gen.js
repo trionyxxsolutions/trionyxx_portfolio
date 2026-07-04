@@ -8,6 +8,7 @@ import { Route as rootRouteImport } from './routes/__root';
 import { Route as ServicesRouteImport } from './routes/services';
 import { Route as ContactRouteImport } from './routes/contact';
 import { Route as AboutRouteImport } from './routes/about';
+import { Route as ReviewsRouteImport } from './routes/reviews';
 import { Route as IndexRouteImport } from './routes/index';
 const ServicesRoute = ServicesRouteImport.update({
     id: '/services',
@@ -24,6 +25,11 @@ const AboutRoute = AboutRouteImport.update({
     path: '/about',
     getParentRoute: () => rootRouteImport,
 });
+const ReviewsRoute = ReviewsRouteImport.update({
+    id: '/reviews',
+    path: '/reviews',
+    getParentRoute: () => rootRouteImport,
+});
 const IndexRoute = IndexRouteImport.update({
     id: '/',
     path: '/',
@@ -33,6 +39,7 @@ const rootRouteChildren = {
     IndexRoute: IndexRoute,
     AboutRoute: AboutRoute,
     ContactRoute: ContactRoute,
+    ReviewsRoute: ReviewsRoute,
     ServicesRoute: ServicesRoute,
 };
 export const routeTree = rootRouteImport
