@@ -30,7 +30,7 @@ function ReviewsPage() {
         highlight="reviews."
         description="Read what clients say about working with Trionyx Solutions, or submit your own review."
       />
-      <ClientReviews showForm />
+      <ClientReviews showForm hideReviewList/>
       <CtaBanner />
     </>
   );
