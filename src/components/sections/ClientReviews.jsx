@@ -1,15 +1,34 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { Quote, Star } from "lucide-react";
+import { Check, ChevronDown, Quote, Star } from "lucide-react";
 import { Section } from "../Section";
 import { fadeUp } from "@/animations/variants";
+
+const serviceOptions = [
+  "Web Development",
+  "Mobile App Development",
+  "Custom Software Development",
+  "Cloud & DevOps",
+  "AI & Machine Learning",
+  "UI/UX Design",
+  "Cybersecurity",
+  "IT Consulting & Maintenance",
+];
+
+const ratingOptions = [
+  { value: "5", label: "5 - Excellent" },
+  { value: "4", label: "4 - Very good" },
+  { value: "3", label: "3 - Good" },
+  { value: "2", label: "2 - Average" },
+  { value: "1", label: "1 - Poor" },
+];
 
 const initialForm = {
   client_name: "",
   client_company: "",
   client_email: "",
-  service: "Website Development",
+  service: "Web Development",
   rating: "5",
   message: "",
   website: "",
@@ -68,6 +87,78 @@ async function parseJsonResponse(response) {
   } catch {
     throw new Error("Server returned an invalid response. Please try again.");
   }
+}
+
+function FancySelect({ label, name, value, options, onChange, required = false }) {
+  const [open, setOpen] = useState(false);
+
+  const normalizedOptions = options.map((option) =>
+    typeof option === "string" ? { value: option, label: option } : option
+  );
+
+  const selectedOption =
+    normalizedOptions.find((option) => option.value === value) ||
+    normalizedOptions[0];
+
+  function selectOption(optionValue) {
+    onChange({
+      target: {
+        name,
+        value: optionValue,
+      },
+    });
+    setOpen(false);
+  }
+
+  return (
+    <label className="relative block">
+      <span className="text-xs uppercase tracking-widest text-muted-foreground">
+        {label} {required && "*"}
+      </span>
+
+      <button
+        type="button"
+        onClick={() => setOpen((current) => !current)}
+        onBlur={() => setTimeout(() => setOpen(false), 120)}
+        className="mt-2 flex w-full items-center justify-between gap-3 rounded-xl border border-border bg-background/80 px-4 py-3 text-left text-sm text-foreground shadow-sm transition-all hover:border-primary/40 hover:bg-secondary/50 focus:border-primary/60 focus:outline-none focus:ring-2 focus:ring-primary/20"
+      >
+        <span className="truncate">{selectedOption?.label}</span>
+        <ChevronDown
+          size={18}
+          className={`shrink-0 text-muted-foreground transition-transform duration-200 ${
+            open ? "rotate-180" : ""
+          }`}
+        />
+      </button>
+
+      {open && (
+        <div className="absolute left-0 right-0 top-[calc(100%+0.5rem)] z-50 overflow-hidden rounded-2xl border border-border bg-background/95 shadow-2xl backdrop-blur-xl">
+          <div className="max-h-64 overflow-y-auto p-1">
+            {normalizedOptions.map((option) => {
+              const active = option.value === value;
+
+              return (
+                <button
+                  key={option.value}
+                  type="button"
+                  onMouseDown={(event) => event.preventDefault()}
+                  onClick={() => selectOption(option.value)}
+                  className={`flex w-full items-center justify-between gap-3 rounded-xl px-4 py-3 text-left text-sm transition-all ${
+                    active
+                      ? "bg-gradient-brand text-on-brand"
+                      : "text-foreground hover:bg-secondary"
+                  }`}
+                >
+                  <span>{option.label}</span>
+                  {active && <Check size={16} />}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </label>
+  );
 }
 
 function ReviewForm({ onSubmitted }) {
@@ -183,38 +274,23 @@ function ReviewForm({ onSubmitted }) {
           />
         </label>
 
-        <label className="block">
-          <span className="text-xs uppercase tracking-widest text-muted-foreground">
-            Rating *
-          </span>
-          <select
-            name="rating"
-            value={form.rating}
-            onChange={updateField}
-            required
-            className={inputClass}
-          >
-            <option value="5">5 - Excellent</option>
-            <option value="4">4 - Very good</option>
-            <option value="3">3 - Good</option>
-            <option value="2">2 - Average</option>
-            <option value="1">1 - Poor</option>
-          </select>
-        </label>
+        <FancySelect
+          label="Rating"
+          name="rating"
+          value={form.rating}
+          options={ratingOptions}
+          onChange={updateField}
+          required
+        />
       </div>
 
-      <label className="block">
-        <span className="text-xs uppercase tracking-widest text-muted-foreground">
-          Service taken
-        </span>
-        <input
-          name="service"
-          value={form.service}
-          onChange={updateField}
-          placeholder="Website Development, Portfolio, AI Solution..."
-          className={inputClass}
-        />
-      </label>
+      <FancySelect
+        label="Service taken"
+        name="service"
+        value={form.service}
+        options={serviceOptions}
+        onChange={updateField}
+      />
 
       <label className="block">
         <span className="text-xs uppercase tracking-widest text-muted-foreground">
