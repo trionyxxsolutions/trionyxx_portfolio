@@ -16,6 +16,7 @@ import nextlogo from "@/assets/next.png";
 import nginxlogo from "@/assets/nginx.png";
 import redislogo from "@/assets/redis.png";
 import awsLogoDark from "@/assets/aws_dark.png";
+import phpLogo from "@/assets/php.png"
 // ✅ Use imported logos
 const stack = [
     { name: "Java", logo: javaLogo },
@@ -31,6 +32,7 @@ const stack = [
     { name: "Next.js", logo: nextlogo },
     { name: "Nginx", logo: nginxlogo },
     { name: "Redis", logo: redislogo },
+    { name: "PHP", logo: phpLogo },
 ];
 const stack_dark = [
     { name: "Java", logo: javaLogo },
@@ -46,6 +48,7 @@ const stack_dark = [
     { name: "Next.js", logo: nextlogo },
     { name: "Nginx", logo: nginxlogo },
     { name: "Redis", logo: redislogo },
+    { name: "PHP", logo: phpLogo },
 ];
 export function TechStack() {
     return (_jsxs("section", { className: "py-24 sm:py-32 overflow-hidden", children: [_jsxs(motion.div, { initial: "hidden", whileInView: "visible", viewport: { once: true }, variants: fadeUp, className: "mx-auto max-w-7xl px-6 lg:px-8 text-center", children: [_jsx("span", { className: "text-xs uppercase tracking-[0.2em] text-accent font-medium", children: "Our Technology" }), _jsxs("h2", { className: "mt-4 font-display text-4xl sm:text-5xl font-semibold tracking-tight", children: ["Powered by ", _jsx("span", { className: "text-gradient", children: "industry-leading tools" }), "."] })] }), _jsxs("div", { className: "relative mt-14", children: [_jsx("div", { className: "absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" }), _jsx("div", { className: "absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" }), _jsx("div", { className: "flex marquee gap-6 w-max items-center", children: [...stack, ...stack].map((tech, i) => {
