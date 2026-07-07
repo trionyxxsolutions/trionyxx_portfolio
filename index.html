@@ -9,24 +9,26 @@
 
     <meta
       name="description"
-      content="Trionyx Solutions provides modern website development, business websites, portfolio websites, AI-driven systems, and scalable digital solutions for startups and local businesses."
+      content="Trionyx Solutions provides modern website development, business websites, portfolio websites, AI-driven systems, mobile solutions, and scalable digital solutions for startups and local businesses."
     />
 
     <meta
       name="keywords"
-      content="Trionyx Solutions, web development company, website development India, business website, portfolio website, IT solutions, AI solutions, startup website, local business website"
+      content="Trionyx Solutions, web development company, website development India, business website, portfolio website, IT solutions, AI solutions, mobile app development, startup website, local business website"
     />
 
     <meta name="author" content="Trionyx Solutions" />
     <meta name="robots" content="index, follow" />
 
-    <!-- Canonical URL: use this only if non-www redirects to www -->
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://www.trionyxsols.co.in/" />
 
-    <!-- Favicon for browser + Google Search -->
+    <!-- Favicon for Browser + Google Search -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/icon.png" />
+    <link rel="shortcut icon" href="/icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon.png" />
 
     <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
     <meta property="og:title" content="Trionyx Solutions | Web Development & IT Services" />
@@ -60,7 +62,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     />
 
-    <!-- Structured Data for Google site name + organization -->
+    <!-- Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -76,6 +78,7 @@
             "name": "Trionyx Solutions",
             "url": "https://www.trionyxsols.co.in/",
             "logo": "https://www.trionyxsols.co.in/icon.png",
+            "image": "https://www.trionyxsols.co.in/logo.png",
             "description": "Trionyx Solutions provides website development, business websites, portfolio websites, AI-driven systems, mobile solutions, and scalable digital products."
           }
         ]
@@ -86,21 +89,25 @@
     <script>
       (function () {
         try {
-          var s = localStorage.getItem("Trionyx-theme");
-          var t =
-            s === "light" || s === "dark"
-              ? s
+          var savedTheme = localStorage.getItem("Trionyx-theme");
+
+          var theme =
+            savedTheme === "light" || savedTheme === "dark"
+              ? savedTheme
               : window.matchMedia("(prefers-color-scheme: dark)").matches
                 ? "dark"
                 : "light";
 
-          var r = document.documentElement;
+          var root = document.documentElement;
 
-          if (t === "dark") r.classList.add("dark");
-          else r.classList.remove("dark");
+          if (theme === "dark") {
+            root.classList.add("dark");
+          } else {
+            root.classList.remove("dark");
+          }
 
-          r.style.colorScheme = t;
-        } catch (e) {}
+          root.style.colorScheme = theme;
+        } catch (error) {}
       })();
     </script>
   </head>
